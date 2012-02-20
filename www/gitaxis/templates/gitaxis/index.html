@@ -1,0 +1,9 @@
+{% extends "gitaxis/base_2col.html" %}
+
+{% block maincontent %}
+<ul>
+{% for repo_name, repo in global_repos %}
+<li><a href="{% url global_repo repo_name %}">{{ repo_name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
